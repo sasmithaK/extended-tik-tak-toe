@@ -1,5 +1,5 @@
 import java.util.Scanner;
-//import
+
 public class TikTakToe {
     public static void main(String[] args) {
 
@@ -64,6 +64,7 @@ class createBoard {
         }
     }
 
+    // create board..........................................................
     void printBoard(String[][] rows) {
         String boarder = "  +-----+-----+-----+";
 
