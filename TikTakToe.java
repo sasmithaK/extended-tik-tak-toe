@@ -2,81 +2,93 @@ import java.util.Scanner;
 
 public class TikTakToe {
     public static void main(String[] args) {
+        int colIndex = 0, rowIndex = 0;
+        int[][] cells = new int[3][3];
 
-        String[][] rows = {
-                { " ", " ", " " },
-                { " ", " ", " " },
-                { " ", " ", " " }
-        };
+        Scanner read = new Scanner(System.in);
+        CreateBoard board1 = new CreateBoard();
 
         System.out.println("\nWelcome to \n  !SUPER TIK TAK TOE!\n");
 
-        Scanner sc = new Scanner(System.in);
-        createBoard board1 = new createBoard();
+        System.out.print("Move 1: ");
+        int userX = read.nextInt();
+        board1.identifyCell(userX, colIndex, rowIndex);
+        cells[colIndex][rowIndex] = userX;
+        board1.printBoard(cells);
 
-        for (int q = 0; q < 5; q++) {
-            System.out.print("A's move : ");
-            String userInput = sc.nextLine();
+        System.out.print("Move 2: ");
+        int userY = read.nextInt();
+        board1.identifyCell(userY, colIndex, rowIndex);
+        cells[colIndex][rowIndex] = userY;
+        board1.printBoard(cells);
 
-            board1.Row(userInput, rows);
-            board1.printBoard(rows);
-
-            System.out.print("B's move : ");
-            String userInput2 = sc.nextLine();
-
-            board1.Row(userInput2, rows);
-            board1.printBoard(rows);
-        }
     }
 }
 
-class createBoard {
+class CreateBoard {
 
-    void Row(String userInput, String[][] rows) {
-        switch (userInput) {
-            case "1":
-                rows[0][0] = "X";
-                break;
-            case "2":
-                rows[1][0] = "X";
-                break;
-            case "3":
-                rows[2][0] = "X";
-                break;
-            case "4":
-                rows[0][1] = "X";
-                break;
-            case "5":
-                rows[1][1] = "X";
-                break;
-            case "6":
-                rows[2][1] = "X";
-                break;
-            case "7":
-                rows[0][2] = "X";
-                break;
-            case "8":
-                rows[1][2] = "X";
-                break;
-            case "9":
-                rows[2][2] = "X";
-                break;
+    void identifyCell(int userInput, int colIndex, int rowIndex) {
+
+        if (userInput <= 0 && userInput >= 11) {
+            userInput = 0;
+        } else {
+            switch (userInput) {
+                case 1:
+                    colIndex = 0; // 1
+                    rowIndex = 0;
+                    break;
+                case 2:
+                    colIndex = 0; // 2
+                    rowIndex = 1;
+                    break;
+                case 3:
+                    colIndex = 0; // 3
+                    rowIndex = 2;
+                    break;
+                case 4:
+                    colIndex = 1; // 4
+                    rowIndex = 0;
+                    break;
+                case 5:
+                    colIndex = 1; // 5
+                    rowIndex = 1;
+                    break;
+                case 6:
+                    colIndex = 1; // 6
+                    rowIndex = 2;
+                    break;
+                case 7:
+                    colIndex = 2; // 7
+                    rowIndex = 0;
+                    break;
+                case 8:
+                    colIndex = 2; // 8
+                    rowIndex = 1;
+                    break;
+                case 9:
+                    colIndex = 2; // 9
+                    rowIndex = 2;
+                    break;
+            }
+
+            // figure out a way to replace the switch-case with a loop.
+
         }
+
     }
 
-    // create board..........................................................
-    void printBoard(String[][] rows) {
+    void printBoard(int[][] cell) {
         String boarder = "  +-----+-----+-----+";
-
         System.out.println(boarder);
         for (int i = 0; i < 3; i++) {
             System.out.print("  | ");
 
             for (int j = 0; j < 3; j++) {
-                System.out.print(" " + rows[i][j] + "  | ");
+                System.out.print(" " + cell[i][j] + "  | ");
             }
 
             System.out.println("\n" + boarder);
         }
+
     }
 }
