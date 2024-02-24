@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class TikTakToe {
     public static void main(String[] args) {
-        int colIndex = 0, rowIndex = 0;
+
         int[][] cells = new int[3][3];
 
         Scanner read = new Scanner(System.in);
@@ -10,16 +10,20 @@ public class TikTakToe {
 
         System.out.println("\nWelcome to \n  !SUPER TIK TAK TOE!\n");
 
-        System.out.print("Move 1: ");
+        System.out.print("User X: "); // first user input
         int userX = read.nextInt();
-        board1.identifyCell(userX, colIndex, rowIndex);
-        cells[colIndex][rowIndex] = userX;
+        board1.identifyCell(userX);
+        int x = board1.colIndex;
+        int y = board1.rowIndex;
+        cells[x][y] = userX;
         board1.printBoard(cells);
 
-        System.out.print("Move 2: ");
+        System.out.print("User Y: "); // second user input
         int userY = read.nextInt();
-        board1.identifyCell(userY, colIndex, rowIndex);
-        cells[colIndex][rowIndex] = userY;
+        board1.identifyCell(userY);
+        int x1 = board1.colIndex;
+        int y1 = board1.rowIndex;
+        cells[x1][y1] = userY;
         board1.printBoard(cells);
 
     }
@@ -27,7 +31,9 @@ public class TikTakToe {
 
 class CreateBoard {
 
-    void identifyCell(int userInput, int colIndex, int rowIndex) {
+    int colIndex, rowIndex;
+
+    void identifyCell(int userInput) {
 
         if (userInput <= 0 && userInput >= 11) {
             userInput = 0;
