@@ -4,8 +4,10 @@ https://youtube.com/shorts/_Na3a1ZrX7c?feature=shared
 
 
 I'm currently trying to make the traditional Tik Tak Toe.
-// example scenario : 
 <pre>
+
+// example scenario : 
+  
 X input : 1
   +-----+-----+-----+ 
   |  X  |  .  |  .  | 
