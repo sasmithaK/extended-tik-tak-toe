@@ -1,10 +1,12 @@
 # extended-tik-tak-toe
-Super Tik Tak Toe
+My final goal is to create a Super Tik Tac Toe game, an extended version of Tik Tak Toe which I came across in a Michael Stevens(from Vsauce) video.
+https://youtube.com/shorts/_Na3a1ZrX7c?feature=shared
 
 
+I'm currently trying to make the traditional Tik Tak Toe.
 // example scenario : 
 <pre>
-X input : 1 &nbsp;
+X input : 1
   +-----+-----+-----+ 
   |  X  |  .  |  .  | 
   +-----+-----+-----+ 
