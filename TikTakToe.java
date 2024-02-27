@@ -102,7 +102,7 @@ class CreateBoard {
             System.out.print("  | ");
 
             for (int j = 0; j < 3; j++) {
-                System.out.print(" " + markedCells[i][j] + "  | ");
+                System.out.print(" " + markedCells[i][j] + "  | "); // array values
             }
 
             System.out.println("\n" + boarder);
