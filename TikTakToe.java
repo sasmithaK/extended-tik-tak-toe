@@ -59,25 +59,25 @@ class CreateBoard {
                         cells[0][0] = symbol;
                         break;
                     case 2:
-                        cells[1][0] = symbol;
+                        cells[0][1] = symbol;
                         break;
                     case 3:
-                        cells[2][0] = symbol;
+                        cells[0][2] = symbol;
                         break;
                     case 4:
-                        cells[0][1] = symbol;
+                        cells[1][0] = symbol;
                         break;
                     case 5:
                         cells[1][1] = symbol;
                         break;
                     case 6:
-                        cells[2][1] = symbol;
+                        cells[1][2] = symbol;
                         break;
                     case 7:
-                        cells[0][2] = symbol;
+                        cells[2][0] = symbol;
                         break;
                     case 8:
-                        cells[1][2] = symbol;
+                        cells[2][1] = symbol;
                         break;
                     case 9:
                         cells[2][2] = symbol;
