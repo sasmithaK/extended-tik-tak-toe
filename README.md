@@ -4,9 +4,18 @@ https://youtube.com/shorts/_Na3a1ZrX7c?feature=shared
 
 
 I'm currently trying to make the traditional Tik Tak Toe.
-<pre>
+<pre> 
 
-// example scenario : 
+  +-----+-----+-----+ 
+  |  1  |  2  |  3  | 
+  +-----+-----+-----+ 
+  |  4  |  5  |  6  |  // this is how cells are arranged
+  +-----+-----+-----+ 
+  |  7  |  8  |  9  | 
+  +-----+-----+-----+ 
+  
+
+  // example scenario :
   
 X input : 1
   +-----+-----+-----+ 

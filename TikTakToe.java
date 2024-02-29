@@ -27,13 +27,24 @@ public class TikTakToe {
         board1.identifyCell(cells, userY);
         board1.printBoard(cells);
 
+        System.out.print("User Z: "); // second user input
+        int userZ = read.nextInt();
+        board1.identifyCell(cells, userZ);
+        board1.printBoard(cells);
+
     }
 }
 
 class CreateBoard {
 
+    String symbol = " ";
+    int count = 2;
+    int x = 0;
+
     // identify the cell number and update the array
     void identifyCell(String[][] cells, int userInput) {
+<<<<<<< Updated upstream
+=======
         String symbol = " ";
         int count = 5;
         int x = 0;
@@ -44,47 +55,66 @@ class CreateBoard {
             while (x < count) {
                 if (x % 2 == 0) {
                     symbol = "X";
+                    break;
                 } else {
                     symbol = "0";
+                    break;
                 }
-                x++;
             }
 
             if (userInput <= 0 && userInput >= 11) {
                 System.out.println("Invalid input!");
+>>>>>>> Stashed changes
 
+        // change between X and 0 depending on the user turn
+        while (x < count) {
+            if (x % 2 == 0) {
+                symbol = "X";
+                System.out.println("SymbolX : " + symbol);
+                break;
             } else {
-                switch (userInput) {
-                    case 1:
-                        cells[0][0] = symbol;
-                        break;
-                    case 2:
-                        cells[0][1] = symbol;
-                        break;
-                    case 3:
-                        cells[0][2] = symbol;
-                        break;
-                    case 4:
-                        cells[1][0] = symbol;
-                        break;
-                    case 5:
-                        cells[1][1] = symbol;
-                        break;
-                    case 6:
-                        cells[1][2] = symbol;
-                        break;
-                    case 7:
-                        cells[2][0] = symbol;
-                        break;
-                    case 8:
-                        cells[2][1] = symbol;
-                        break;
-                    case 9:
-                        cells[2][2] = symbol;
-                        break;
-                }
+                symbol = "0";
+                System.out.println("Symbol0 : " + symbol);
+                break;
+            }
+            symbol = " ";
+        }
+
+        if (userInput <= 0 && userInput >= 11) {
+            System.out.println("Invalid input!");
+
+        } else {
+            switch (userInput) {
+                case 1:
+                    cells[0][0] = symbol;
+                    break;
+                case 2:
+                    cells[0][1] = symbol;
+                    break;
+                case 3:
+                    cells[0][2] = symbol;
+                    break;
+                case 4:
+                    cells[1][0] = symbol;
+                    break;
+                case 5:
+                    cells[1][1] = symbol;
+                    break;
+                case 6:
+                    cells[1][2] = symbol;
+                    break;
+                case 7:
+                    cells[2][0] = symbol;
+                    break;
+                case 8:
+                    cells[2][1] = symbol;
+                    break;
+                case 9:
+                    cells[2][2] = symbol;
+                    break;
             }
         }
+        x++;
     }
 
     // print the tiktaktoe board with the corresponding array values
