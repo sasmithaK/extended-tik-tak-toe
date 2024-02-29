@@ -43,28 +43,6 @@ class CreateBoard {
 
     // identify the cell number and update the array
     void identifyCell(String[][] cells, int userInput) {
-<<<<<<< Updated upstream
-=======
-        String symbol = " ";
-        int count = 5;
-        int x = 0;
-
-        for (int i = 1; i < 10; i++) {
-
-            // change between X and 0 depending on the user turn
-            while (x < count) {
-                if (x % 2 == 0) {
-                    symbol = "X";
-                    break;
-                } else {
-                    symbol = "0";
-                    break;
-                }
-            }
-
-            if (userInput <= 0 && userInput >= 11) {
-                System.out.println("Invalid input!");
->>>>>>> Stashed changes
 
         // change between X and 0 depending on the user turn
         while (x < count) {
@@ -77,7 +55,6 @@ class CreateBoard {
                 System.out.println("Symbol0 : " + symbol);
                 break;
             }
-            symbol = " ";
         }
 
         if (userInput <= 0 && userInput >= 11) {
