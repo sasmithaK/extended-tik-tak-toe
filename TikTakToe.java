@@ -4,12 +4,7 @@ public class TikTakToe {
     public static void main(String[] args) {
 
         // initializations
-        String[][] cells = {
-                { " ", " ", " " },
-                { " ", " ", " " },
-                { " ", " ", " " }
-        };
-
+        String[][] cells = { { " ", " ", " " }, { " ", " ", " " }, { " ", " ", " " } };
         Scanner read = new Scanner(System.in);
         CreateBoard board1 = new CreateBoard();
 
@@ -17,19 +12,24 @@ public class TikTakToe {
         System.out.println("\nWelcome to \n  !SUPER TIK TAK TOE!\n");
 
         // take user inputs
-        System.out.print("User X: "); // first user input
+        System.out.print("User X: "); // first user
         int userX = read.nextInt();
         board1.identifyCell(cells, userX);
         board1.printBoard(cells);
 
-        System.out.print("User Y: "); // second user input
+        System.out.print("User Y: "); // second user
         int userY = read.nextInt();
         board1.identifyCell(cells, userY);
         board1.printBoard(cells);
 
-        System.out.print("User Z: "); // second user input
+        System.out.print("User Z: "); // first user
         int userZ = read.nextInt();
         board1.identifyCell(cells, userZ);
+        board1.printBoard(cells);
+
+        System.out.print("User T: "); // second user
+        int userT = read.nextInt();
+        board1.identifyCell(cells, userT);
         board1.printBoard(cells);
 
     }
@@ -38,26 +38,28 @@ public class TikTakToe {
 class CreateBoard {
 
     String symbol = " ";
-    int count = 2;
+    int count = 9;
     int x = 0;
+
+    // check the cell availability
 
     // identify the cell number and update the array
     void identifyCell(String[][] cells, int userInput) {
 
-        // change between X and 0 depending on the user turn
+        // change symbol between X and 0 accordingly
         while (x < count) {
             if (x % 2 == 0) {
+
                 symbol = "X";
-                System.out.println("SymbolX : " + symbol);
                 break;
             } else {
+
                 symbol = "0";
-                System.out.println("Symbol0 : " + symbol);
                 break;
             }
         }
 
-        if (userInput <= 0 && userInput >= 11) {
+        if (userInput <= 0 || userInput >= 10) {
             System.out.println("Invalid input!");
 
         } else {
@@ -95,14 +97,14 @@ class CreateBoard {
     }
 
     // print the tiktaktoe board with the corresponding array values
-    void printBoard(String[][] markedCells) {
+    void printBoard(String[][] cells) {
         String boarder = "  +-----+-----+-----+";
         System.out.println(boarder);
         for (int i = 0; i < 3; i++) {
             System.out.print("  | ");
 
             for (int j = 0; j < 3; j++) {
-                System.out.print(" " + markedCells[i][j] + "  | "); // array values
+                System.out.print(" " + cells[i][j] + "  | "); // array values
             }
 
             System.out.println("\n" + boarder);

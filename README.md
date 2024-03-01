@@ -5,11 +5,11 @@ https://youtube.com/shorts/_Na3a1ZrX7c?feature=shared
 
 I'm currently trying to make the traditional Tik Tak Toe.
 <pre> 
-
+  // this is how cells are arranged
   +-----+-----+-----+ 
   |  1  |  2  |  3  | 
   +-----+-----+-----+ 
-  |  4  |  5  |  6  |  // this is how cells are arranged
+  |  4  |  5  |  6  |  
   +-----+-----+-----+ 
   |  7  |  8  |  9  | 
   +-----+-----+-----+ 
