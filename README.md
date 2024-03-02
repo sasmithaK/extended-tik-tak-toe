@@ -3,7 +3,7 @@ My final goal is to create a Super Tik Tac Toe game, an extended version of Tik 
 https://youtube.com/shorts/_Na3a1ZrX7c?feature=shared
 
 
-I'm currently trying to make the traditional Tik Tak Toe.
+I'm currently you can play a full game cycle 
 <pre> 
   // this is how cells are arranged
   +-----+-----+-----+ 
@@ -34,8 +34,4 @@ X input : 1
   +-----+-----+-----+ 
   |  .  |  0  |  .  | 
   +-----+-----+-----+ 
-
-  arr[3][3] = {{"X", ".", "."}
-               {".", ".", "."}
-               {".", "0", "."}}
 </pre>
