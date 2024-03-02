@@ -3,7 +3,7 @@ My final goal is to create a Super Tik Tac Toe game, an extended version of Tik 
 https://youtube.com/shorts/_Na3a1ZrX7c?feature=shared
 
 
-I'm currently you can play a full game cycle of the traditional game in the CLI 
+You can play a full game cycle of the traditional game in the CLI 
 <pre> 
   //This is how cells are arranged
   +-----+-----+-----+ 
