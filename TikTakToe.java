@@ -14,49 +14,65 @@ public class TikTakToe {
         // take user inputs
         System.out.print("User X: "); // first user
         int userX = read.nextInt();
+        while (!board1.isEmptyCell(cells, userX)) {
+            System.out.println("Cell already marked. Please select an empty cell.");
+            System.out.print("User X: ");
+            userX = read.nextInt();
+        }
         board1.identifyCell(cells, userX);
         board1.printBoard(cells);
 
         System.out.print("User Y: "); // second user
         int userY = read.nextInt();
+        while (!board1.isEmptyCell(cells, userY)) {
+            System.out.println("Cell already marked. Please select an empty cell.");
+            System.out.print("User Y: ");
+            userY = read.nextInt();
+        }
         board1.identifyCell(cells, userY);
         board1.printBoard(cells);
-
-        System.out.print("User Z: "); // first user
-        int userZ = read.nextInt();
-        board1.identifyCell(cells, userZ);
-        board1.printBoard(cells);
-
-        System.out.print("User T: "); // second user
-        int userT = read.nextInt();
-        board1.identifyCell(cells, userT);
-        board1.printBoard(cells);
-
     }
 }
 
 class CreateBoard {
 
     String symbol = " ";
-    int count = 9;
     int x = 0;
 
-    // check the cell availability
+    // check if the cell is empty
+    boolean isEmptyCell(String[][] cells, int userInput) {
+        switch (userInput) {
+            case 1:
+                return cells[0][0].equals(" ");
+            case 2:
+                return cells[0][1].equals(" ");
+            case 3:
+                return cells[0][2].equals(" ");
+            case 4:
+                return cells[1][0].equals(" ");
+            case 5:
+                return cells[1][1].equals(" ");
+            case 6:
+                return cells[1][2].equals(" ");
+            case 7:
+                return cells[2][0].equals(" ");
+            case 8:
+                return cells[2][1].equals(" ");
+            case 9:
+                return cells[2][2].equals(" ");
+            default:
+                return false;
+        }
+    }
 
     // identify the cell number and update the array
     void identifyCell(String[][] cells, int userInput) {
 
         // change symbol between X and 0 accordingly
-        while (x < count) {
-            if (x % 2 == 0) {
-
-                symbol = "X";
-                break;
-            } else {
-
-                symbol = "0";
-                break;
-            }
+        if (x % 2 == 0) {
+            symbol = "X";
+        } else {
+            symbol = "0";
         }
 
         if (userInput <= 0 || userInput >= 10) {
