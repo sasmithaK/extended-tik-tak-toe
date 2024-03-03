@@ -10,8 +10,12 @@ public class TikTakToe {
 
         // intro prompt
         System.out.println("\nWelcome..! fellow traveler..... \nThis is my first JAVA project....");
-        System.out.println("\n! TIK TAK TOE !");
-
+        System.out.println("\n! TIK TAK TOE !\n");
+        System.out.println("\nThis is how the cells in the board are arrenged.\n");
+        System.err.println("+-----+-----+-----+\r\n" + "|  1  |  2  |  3  |\r\n" + "+-----+-----+-----+\r\n"
+                + "|  4  |  5  |  6  |\r\n" + "+-----+-----+-----+\r\n" + "|  7  |  8  |  9  |\r\n"
+                + "+-----+-----+-----+");
+        System.out.println("\nLet's start the game......!!!\n");
         // take user inputs
         for (int i = 0; i < 10; i++) {
             System.out.print("User X: "); // first user
