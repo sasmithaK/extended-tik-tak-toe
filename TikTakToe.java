@@ -9,7 +9,8 @@ public class TikTakToe {
         CreateBoard game1 = new CreateBoard();
 
         // intro prompt
-        System.out.println("\nWelcome to \n  !SUPER TIK TAK TOE!\n");
+        System.out.println("\nWelcome..! fellow traveler..... \nThis is my first JAVA project....");
+        System.out.println("! TIK TAK TOE !");
 
         // take user inputs
         for (int i = 0; i < 10; i++) {
