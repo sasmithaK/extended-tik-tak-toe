@@ -28,7 +28,7 @@ public class TikTakToe {
             game1.identifyCell(cells, userX);
             game1.printBoard(cells);
             if (game1.hasWinner(cells)) {
-                System.out.println("User X wins!");
+                System.out.println("\n!! User X WINS !!");
                 read.close();
                 return;
             }
@@ -43,7 +43,7 @@ public class TikTakToe {
             game1.identifyCell(cells, userY);
             game1.printBoard(cells);
             if (game1.hasWinner(cells)) {
-                System.out.println("User Y wins!");
+                System.out.println("\n!! User Y WINS !!");
                 read.close();
                 return;
             }
