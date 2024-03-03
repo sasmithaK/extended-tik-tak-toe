@@ -10,7 +10,7 @@ public class TikTakToe {
 
         // intro prompt
         System.out.println("\nWelcome..! fellow traveler..... \nThis is my first JAVA project....");
-        System.out.println("! TIK TAK TOE !");
+        System.out.println("\n! TIK TAK TOE !");
 
         // take user inputs
         for (int i = 0; i < 10; i++) {
