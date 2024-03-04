@@ -16,34 +16,39 @@ public class TikTakToe {
                 + "|  4  |  5  |  6  |\r\n" + "+-----+-----+-----+\r\n" + "|  7  |  8  |  9  |\r\n"
                 + "+-----+-----+-----+");
         System.out.println("\nLet's start the game......!!!\n");
+        System.out.print("Enter player 1 name : ");
+        String userName1 = read.nextLine();
+        System.out.print("Enter player 2 name : ");
+        String userName2 = read.nextLine();
+
         // take user inputs
         for (int i = 0; i < 10; i++) {
-            System.out.print("User X: "); // first user
+            System.out.print(userName1 + " : "); // first user
             int userX = read.nextInt();
             while (!game1.isEmptyCell(cells, userX)) {
                 System.out.println("Cell already marked. Please select an empty cell.");
-                System.out.print("User X: ");
+                System.out.print(userName1 + " : ");
                 userX = read.nextInt();
             }
             game1.identifyCell(cells, userX);
             game1.printBoard(cells);
             if (game1.hasWinner(cells)) {
-                System.out.println("\n!! User X WINS !!");
+                System.out.println("\n!! The winner is " + userName1);
                 read.close();
                 return;
             }
 
-            System.out.print("User Y: "); // second user
+            System.out.print(userName2 + " : "); // second user
             int userY = read.nextInt();
             while (!game1.isEmptyCell(cells, userY)) {
                 System.out.println("Cell already marked. Please select an empty cell.");
-                System.out.print("User Y: ");
+                System.out.print(userName2 + " : ");
                 userY = read.nextInt();
             }
             game1.identifyCell(cells, userY);
             game1.printBoard(cells);
             if (game1.hasWinner(cells)) {
-                System.out.println("\n!! User Y WINS !!");
+                System.out.println("\n!! The winner is " + userName2);
                 read.close();
                 return;
             }
