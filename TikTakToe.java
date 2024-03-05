@@ -15,12 +15,12 @@ public class TikTakToe {
         System.err.println("+-----+-----+-----+\r\n" + "|  1  |  2  |  3  |\r\n" + "+-----+-----+-----+\r\n"
                 + "|  4  |  5  |  6  |\r\n" + "+-----+-----+-----+\r\n" + "|  7  |  8  |  9  |\r\n"
                 + "+-----+-----+-----+");
-        System.out.println("\nLet's start the game......!!!\n");
+        System.out.println("\n!! Enter player names !!\n");
         System.out.print("Enter player 1 name : ");
         String userName1 = read.nextLine();
         System.out.print("Enter player 2 name : ");
         String userName2 = read.nextLine();
-
+        System.out.println("\nLet's start the game......!!!\n");
         // take user inputs
         for (int i = 0; i < 10; i++) {
             System.out.print(userName1 + " : "); // first user
