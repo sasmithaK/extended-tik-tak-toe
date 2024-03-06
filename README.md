@@ -4,6 +4,8 @@ https://youtube.com/shorts/_Na3a1ZrX7c?feature=shared
 
 
 You can play a full game cycle of the traditional game in the CLI 
+- there is no game draw and a reset mechanism yet.
+
 <pre> 
   //This is how cells are arranged
   +-----+-----+-----+ 
