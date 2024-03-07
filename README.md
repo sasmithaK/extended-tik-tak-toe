@@ -3,8 +3,8 @@ My final goal is to create a Super Tik Tac Toe game, an extended version of Tik 
 https://youtube.com/shorts/_Na3a1ZrX7c?feature=shared
 
 
-You can play a full game cycle of the traditional game in the CLI 
-- there is no game draw and a reset mechanism yet.
+Currently you can play a basic game cycle in the CLI 
+- (working on game draw and a reset mechanism)
 
 <pre> 
   //This is how cells are arranged
@@ -37,3 +37,8 @@ X input : 1
   |  .  |  0  |  .  | 
   +-----+-----+-----+ 
 </pre>
+
+---
+### My next goal is to implement a GUI
+
+![Desktop - 1](https://github.com/sasmithaK/extended-tik-tak-toe/assets/73338956/2fc87cb4-4ebe-4fae-b6e8-c12e456bcafc)
