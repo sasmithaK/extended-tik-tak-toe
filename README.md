@@ -7,7 +7,7 @@ My final goal is to create a **Super Tik Tac Toe** game, an extended version of 
 
 ### Level 1
 You can play a basic game cycle in the CLI 
-- (working on game draw and a reset mechanism)
+- (reset mechanism)
 
 <pre> 
   //This is how cells are arranged
