@@ -15,43 +15,53 @@ public class TikTakToe {
         System.err.println("+-----+-----+-----+\r\n" + "|  1  |  2  |  3  |\r\n" + "+-----+-----+-----+\r\n"
                 + "|  4  |  5  |  6  |\r\n" + "+-----+-----+-----+\r\n" + "|  7  |  8  |  9  |\r\n"
                 + "+-----+-----+-----+");
+
+        // get user names
         System.out.println("\n!! Enter player names !!\n");
         System.out.print("Enter player 1 name : ");
-        String userName1 = read.nextLine();
+        String userX = read.nextLine();
         System.out.print("Enter player 2 name : ");
-        String userName2 = read.nextLine();
+        String userY = read.nextLine();
         System.out.println("\nLet's start the game......!!!\n");
-        // take user inputs
-        for (int i = 0; i < 10; i++) {
-            System.out.print(userName1 + " : "); // first user
-            int userX = read.nextInt();
-            while (!game1.isEmptyCell(cells, userX)) {
-                System.out.println("Cell already marked. Please select an empty cell.");
-                System.out.print(userName1 + " : ");
-                userX = read.nextInt();
-            }
-            game1.identifyCell(cells, userX);
-            game1.printBoard(cells);
-            if (game1.hasWinner(cells)) {
-                System.out.println("\n!! The winner is " + userName1 + " !!" + "\n");
-                read.close();
-                return;
+
+        // get user inputs
+        for (int i = 0; i < 9; i++) {
+            if (i % 2 == 0) {
+                System.out.print(userX + " : "); // first user
+            } else {
+                System.out.print(userY + " : "); // second user
             }
 
-            System.out.print(userName2 + " : "); // second user
-            int userY = read.nextInt();
-            while (!game1.isEmptyCell(cells, userY)) {
+            int userInput = read.nextInt();
+            while (!game1.isEmptyCell(cells, userInput)) {
                 System.out.println("Cell already marked. Please select an empty cell.");
-                System.out.print(userName2 + " : ");
-                userY = read.nextInt();
+                if (i % 2 == 0) {
+                    System.out.print(userX + " : ");
+                } else {
+                    System.out.print(userY + " : ");
+                }
+                userInput = read.nextInt();
             }
-            game1.identifyCell(cells, userY);
+
+            game1.identifyCell(cells, userInput);
             game1.printBoard(cells);
+
             if (game1.hasWinner(cells)) {
-                System.out.println("\n!! The winner is " + userName2 + " !!" + "\n");
+                if (i % 2 == 0) {
+                    System.out.println("\n!! The winner is " + userX + " !!" + "\n");
+                } else {
+                    System.out.println("\n!! The winner is " + userY + " !!" + "\n");
+                }
                 read.close();
                 return;
             }
+        }
+
+        // Check for draw
+        if (game1.isDraw(cells)) {
+            System.out.println("\nIt's a draw!\n");
+        } else {
+            System.out.println("\nGame ended.\n");
         }
 
         read.close();
@@ -180,5 +190,17 @@ class CreateBoard {
         }
 
         return false;
+    }
+
+    // check if it's a draw
+    boolean isDraw(String[][] cells) {
+        for (String[] row : cells) {
+            for (String cell : row) {
+                if (cell.equals(" ")) {
+                    return false;
+                }
+            }
+        }
+        return !hasWinner(cells);
     }
 }
