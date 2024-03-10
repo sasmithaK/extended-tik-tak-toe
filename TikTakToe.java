@@ -12,11 +12,11 @@ public class TikTakToe {
         System.out.println("\nWelcome..! fellow traveler..... \nThis is my first JAVA project....");
         System.out.println("\n! TIK TAK TOE !\n");
         System.out.println("\nThis is how the cells in the board are arrenged.\n");
-        System.err.println("+-----+-----+-----+\r\n" + "|  1  |  2  |  3  |\r\n" + "+-----+-----+-----+\r\n"
-                + "|  4  |  5  |  6  |\r\n" + "+-----+-----+-----+\r\n" + "|  7  |  8  |  9  |\r\n"
+        System.err.println("+-----+-----+-----+\n" + "|  1  |  2  |  3  |\n" + "+-----+-----+-----+\n"
+                + "|  4  |  5  |  6  |\n" + "+-----+-----+-----+\n" + "|  7  |  8  |  9  |\n"
                 + "+-----+-----+-----+");
 
-        // get user names
+        // get players names
         System.out.println("\n!! Enter player names !!\n");
         System.out.print("Enter player 1 name : ");
         String userX = read.nextLine();
@@ -24,7 +24,7 @@ public class TikTakToe {
         String userY = read.nextLine();
         System.out.println("\nLet's start the game......!!!\n");
 
-        // get user inputs
+        // get players inputs
         for (int i = 0; i < 9; i++) {
             if (i % 2 == 0) {
                 System.out.print(userX + " : "); // first user
