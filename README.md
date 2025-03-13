@@ -1,5 +1,6 @@
 
-![Branch Visualization](https://github-readme-branch-visualizer-cktuspk7k.vercel.app/api/branches?user=sasmithaK&repo=extended-tik-tak-toe)
+![Branch Visualization](https://github-readme-branch-visualizer.vercel.app//branches?user=sasmithaK&repo=hands-on-MERN)
+
 
 
 # extended-tik-tak-toe
